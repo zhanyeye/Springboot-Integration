@@ -1,6 +1,7 @@
 package com.example.springbootexamples;
 
 import com.example.springbootexamples.repository.impl.CustomizedRepositoryImp;
+import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -21,5 +22,11 @@ public class SpringbootExamplesApplication {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public Hibernate5Module module() {
+        Hibernate5Module module = new Hibernate5Module();  // 序列化延迟加载对象的ID
+        module.enable(Hibernate5Module.Feature.SERIALIZE_IDENTIFIER_FOR_LAZY_NOT_LOADED_OBJECTS);
+        return module;
+    }
 
 }

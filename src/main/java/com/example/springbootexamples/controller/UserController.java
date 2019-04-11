@@ -63,12 +63,12 @@ public class UserController {
         return Map.of("address", address);
     }
 
-    @GetMapping("/users/{uid}/address")
+    @GetMapping("/users/{uid}/addresses")
     public Map getAddresses(@RequestAttribute int uid) {
         return Map.of("Addresses", userService.ListAddresses(uid));
     }
 
-    @PatchMapping("/users/{uid}/address/{aid}")
+    @PatchMapping("/users/{uid}/addresses/{aid}")
     public Map patchAddress(@RequestBody Address address) {
         return Map.of("address", userService.updateAddress(address));
     }

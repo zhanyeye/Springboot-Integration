@@ -1,21 +1,21 @@
-POST http://localhost:8080/api/users/12/addresses
-Authorization:
+POST http://localhost:8080/api/users/1/addresses
+Authorization: d8c2506aad0293f255f337dc4d48816c0a717baa2dd61399e13be34cda9582da230d08705b0af6511afd38e571e7ef5e
 Content-Type: application/json
 
 {
   "detail": "778",
   "user": {
-    "id": 18
+    "id": 1
   }
 }
 
 ###
 GET http://localhost:8080/api/users/12/addresses
-Authorization:
+Authorization: d8c2506aad0293f255f337dc4d48816c0a717baa2dd61399e13be34cda9582da230d08705b0af6511afd38e571e7ef5e
 
 ###
 PATCH http://localhost:8080/api/users/1/addresses/1
-Authorization:
+Authorization: d8c2506aad0293f255f337dc4d48816c0a717baa2dd61399e13be34cda9582da230d08705b0af6511afd38e571e7ef5e
 Content-Type: application/json
 
 {
