@@ -10,4 +10,4 @@ springboot整合,为后续前端开发提供数据
 + `Interceptor`
 + `Spring`
 + `spring-data`
-+ `JPA` ... 
++ `JPA` 
