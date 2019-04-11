@@ -1,4 +1,5 @@
-POST http://localhost:8080/api/users/1/addresses
+###基于token 数据请求，获取全部地址，即使伪造用户ID也无效
+POST http://localhost:8080/api/users/12/addresses
 Authorization: d8c2506aad0293f255f337dc4d48816c0a717baa2dd61399e13be34cda9582da230d08705b0af6511afd38e571e7ef5e
 Content-Type: application/json
 

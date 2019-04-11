@@ -23,7 +23,7 @@ public class SpringbootExamplesApplication {
     }
 
     @Bean
-    public Hibernate5Module module() {
+    public Hibernate5Module module() { //添加Hibernate5Module组件到容器，声明仅序列化延迟加载对象的ID，可用于后期操作
         Hibernate5Module module = new Hibernate5Module();  // 序列化延迟加载对象的ID
         module.enable(Hibernate5Module.Feature.SERIALIZE_IDENTIFIER_FOR_LAZY_NOT_LOADED_OBJECTS);
         return module;
