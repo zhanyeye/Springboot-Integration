@@ -1,6 +1,6 @@
 ###基于token 数据请求，获取全部地址，即使伪造用户ID也无效
 POST http://localhost:8080/api/users/12/addresses
-Authorization: d8c2506aad0293f255f337dc4d48816c0a717baa2dd61399e13be34cda9582da230d08705b0af6511afd38e571e7ef5e
+Authorization: 2e08a455c5f3c86baf4be044d4841443fd09318ce16e5882aeaa296d3630ba197233886949d74a339bad856574642b41
 Content-Type: application/json
 
 {
