@@ -44,6 +44,7 @@ public class UserService {
     }
 
     public Address updateAddress(Address address) {
+        //更新address，先查询其与用户的关系，再修改
         return Optional.ofNullable(addressRepository.find(address.getUser().getId(), address.getId()))
                 .or(() -> { throw new ResponseStatusException(HttpStatus.FORBIDDEN, "无权限");}) //如果为空
                 .map(a -> addressRepository.save(address))
